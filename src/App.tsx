@@ -2,14 +2,9 @@ import "./App.css";
 import { useEffect } from "react";
 import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import About from "./components/about";
-import { HeroParallaxDemo } from "./components/heroDemo";
-import Home from "./components/home";
 import { TabScreen } from "./components/tabScreen";
 import { SpotlightPreview } from "./components/lightSample";
-import Jobs from "./components/jobs";
-import { StickyScrollRevealDemo } from "./components/services";
 import ServiceSection from "./components/ui/serviceSection";
-import ServiceCard from "./components/ui/serviceCard";
 import { Skills } from "./components/skills";
 import ProjectSection from "./components/projectSection";
 import { TabsDemo } from "./components/tabDemo";
@@ -18,9 +13,7 @@ import { useState } from "react";
 import { InfiniteMovingCardsDemo } from "./components/movingCards";
 
 function App() {
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  })
+  const lenis = useLenis(({ scroll }) => {})
 
 
   const [data,setdata]=useState(
@@ -884,8 +877,7 @@ function App() {
 
     const [showApp,setshowApp]=useState(false)
 
-  useEffect( () => {
-    // const response 
+  useEffect( () => { 
   const getData=async ()=>{
     const response = await fetch('https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae')
     const responseData=await response.json()

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    background: #050505;
+}
+
+@font-face {
+    font-family: maziusitalic;
+    src: url('../public/fonts/Maziusitalic.otf');
+  }
+
+  .mazi{
+    font-family: maziusitalic;
+    color: #14cf93;
+  }
+  .ParentOfBoth:hover .ToolTip{
+    opacity: 1;
+  }
+ 
+.projectDiv:hover .projectTitle{
+  opacity: 1;
+}
+.projectTitle{
+  transition: all 0.3s ease-in-out;
+}
+.projectImage:hover{
+transform: scale(1.1);
+opacity: 0.2;
+
+}
+.projectImage,.timeLineWrapper{
+  transition: all 0.3s ease-in-out;
+}
+.projectDiv{
+  overflow: hidden;
+  background-color: black;
+}
+.glassy{
+  background: linear-gradient(to right bottom, rgb(255 255 255 / 10%), rgb(255 255 255 / 2%));
+  backdrop-filter: blur(1rem);
+}
